@@ -12,7 +12,7 @@ function onOpen() {
 function novosPedidos() {
 
   const assuntoAProcurar = 'SOLICITAÇÕES NÃO COTADAS';
-  const minhaPasta = DriveApp.getFolderById("1RrV0kCe_4FINfVA5LowOm0U6yPisHhjK");
+  const minhaPasta = DriveApp.getFolderById("");
 
   // Procurar apenas uma thread com o assunto específico.
   const threads = GmailApp.search(`subject:"${assuntoAProcurar}"`, 0, 1);
@@ -47,7 +47,7 @@ function novosPedidos() {
       var dados = guia.getDataRange().getValues();
 
       //Planilha de recebimento de pedidos
-      var spreadsheetId = '1-uEt6GODKfRQKSGO5pb0CN3zy8ggY69pGBUCzHOBmpI';
+      var spreadsheetId = '';
       var planilhaRecebimento = SpreadsheetApp.openById(spreadsheetId);
       var guiaRecebimento = planilhaRecebimento.getSheetByName('Pedidos');
       var dadosRecebimento = guiaRecebimento.getDataRange().getValues();
